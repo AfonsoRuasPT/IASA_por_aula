@@ -24,5 +24,5 @@ class Estado():
             return False
 
     @abstractmethod
-    def id_valor():
+    def id_valor(self):
         """"""

@@ -11,10 +11,10 @@ class MecanismoProcura:
     def __init__(self, fronteira):
         self._fronteira = fronteira
 
-    def _iniciar_memoria(self):
+    def _iniciar_memoria(self): # inincia a fronteira
         self._fronteira.iniciar()
 
-    def _memorizar(self, no):
+    def _memorizar(self, no):  # inserir no na fronteira
         self._fronteira.inserir(no)
 
     def procurar(self, problema): # retorna uma solucao
@@ -31,6 +31,8 @@ class MecanismoProcura:
                 return Solucao(no)
             for no_suc in self._expandir(problema, no): # expandimos o nosso no, ou seja, geramos nos sucessores aplicando operadores ao nosso no
                 self._memorizar(no_suc)                 # adicionamose esses nos a memoria do mecanismo de procura
+
+
 
     def _expandir(self, problema, no): # retorna uma lista de nos
         sucessores = []                # iniciamos uma lista de nos vazios
