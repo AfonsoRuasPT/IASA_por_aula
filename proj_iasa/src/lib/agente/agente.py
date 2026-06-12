@@ -1,24 +1,25 @@
-from abc import ABC, abstractmethod
+from abc import abstractmethod, ABC
 
 class Agente(ABC):
 
     def __init__(self, controlo):
-        self._controlo = controlo # um "_" significa que é um atributo protefctedo, ou seja, só pode ser acedido dentro da classe ou por classes filhas
+        self._controlo = controlo
 
     @abstractmethod
     def _percepcionar(self):
-        """Obter percepção do ambiente. Retorna uma percepção""" # Doc string, instrucao sintatica informativa que tem o mesmo efeito qure o pass
+        """Obter percepção do ambiente. Retorna uma percepção"""
 
     @abstractmethod
     def _actuar(self, accao):
         """Actua"""
 
+
     def executar(self):
-        percepcao = self._percepcionar() # obter percepção do ambiente
-        accao = self._controlo.processar(percepcao) # processar a percepção para obter a acção a executar
-        if accao is not None: # se a acção for diferente de None, ou seja, se houver uma acção a executar, None é uma marca de ausencia de valor, o != implica comparacao de valores ent aqui n dá, é um teste semantico
-            return self._actuar(accao) # executar a acção
-        return None # se não houver acção a executar, retorna None
+        percepcao = self._percepcionar() # obtém percepção do ambiente chamando o método abstracto da subclasse
+        accao = self._controlo.processar(percepcao) # delega a decisão ao Controlo, padrão de delegação: Agente utiliza Controlo processar, mantendo acoplamento baixo
+        if accao is not None: # None é o valor que indica ausência de acção; usa-se "is not None" em vez de "!= None" porque é uma comparação de identidade (é o mesmo objecto None), não de valor
+            return self._actuar(accao) # executa a acção concreta na subclasse
+        return None # sem acção válida, o ciclo termina sem efeito
 
         """Executar acção no ambiente. Falta implementar o método executar da Classe Agente"""
         # raise NotImplementedError para dar erro caso o método seja chamado sem ser implementado

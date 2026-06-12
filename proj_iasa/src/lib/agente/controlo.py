@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
+class Controlo(ABC):
 
-class Controlo(ABC): # classe abstrata Controlo, que define a interface para o controlo do agente
 
     @abstractmethod
     def processar(self, percepcao):

@@ -1,4 +1,4 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 
 class Accao(ABC):
     """Interface que representa uma acção"""
