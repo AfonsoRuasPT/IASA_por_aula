@@ -18,7 +18,7 @@ class FronteiraPrioridade(Fronteira):
 
     def inserir(self, no):
         no.prioridade = self.__avaliador.prioridade(no)
-        heappush(self.nos, no)
+        heappush(self._nos, no) # faltava o _ no self._nos, porque nos é defenido como protected na class mae
 
     def remover(self):
-        return heappop(self.nos)
+        return heappop(self._nos) # faltava o _ no self._nos, porque nos é defenido como protected na class mae

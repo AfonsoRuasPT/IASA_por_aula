@@ -27,7 +27,7 @@ class MecanismoProcura:
                                             # 1000 e tedas as "solucoes" encontradas tiverem custos superiores, por exemplo
 
             no = self._fronteira.remover() # uma vez que a fronteira nao esta vazia retiramos o no da fronteira segundo o criterio de remoção, que pode ser vareado, de largura ou em prefundidade
-            if no is problema.objectivo(no.estado): # se o estado associado ao no for o objetivo do problema que aceitamos retornamos a solucao
+            if problema.objectivo(no.estado): # se o estado associado ao no for o objetivo do problema que aceitamos retornamos a solucao
                 return Solucao(no)
             for no_suc in self._expandir(problema, no): # expandimos o nosso no, ou seja, geramos nos sucessores aplicando operadores ao nosso no
                 self._memorizar(no_suc)                 # adicionamose esses nos a memoria do mecanismo de procura

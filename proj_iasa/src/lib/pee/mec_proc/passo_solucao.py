@@ -1,7 +1,7 @@
 from mod.estado import Estado
 from mod.operador import Operador
 
-class PassoSolucao(Estado, Operador):
+class PassoSolucao(): # PassoSolucao nao herda nem Estado nem Solucao
 
 
     """

@@ -16,4 +16,5 @@ class ProcuraProfLim(ProcuraProfundidade):
         return super().procurar(problema)
 
     def _expandir(self, problema, no):
-        return super().expandir(problema, no) if no.profundidade < self.__prof_max else []  # utilizacao de operador ternario
+        return super()._expandir(problema, no) if no.profundidade < self.__prof_max else []  # utilizacao de operador ternario
+                      # expandir ]e protected como defenido na class MecanismoProcura, faltava o "_" e, super()._expandir(...)

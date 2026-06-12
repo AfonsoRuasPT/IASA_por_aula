@@ -15,12 +15,12 @@ from mod_prob.heuristica_de_contagem import HeuristicaDeContagem
 
 MECANISMOS_PROCURA = [
     ProcuraProfundidade(),
-    #ProcuraLargura(),
-    #ProcuraAA(),
-    #ProcuraCustoUnif(),
-    #ProcuraSofrega(),
-    #ProcuraProIter(),
-    #ProcuraProfLim()
+    ProcuraLargura(),
+    ProcuraCustoUnif(),
+    ProcuraProIter(),
+    ProcuraProfLim(),
+    ProcuraAA(),
+    ProcuraSofrega()
 ]
 
 VALOR_INICIAL  = 0

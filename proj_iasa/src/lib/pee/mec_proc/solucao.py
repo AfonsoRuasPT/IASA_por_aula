@@ -15,7 +15,8 @@ class Solucao:
     def __init__(self, no_final):
         self.__dimensao = no_final.profundidade
         self.__custo = no_final.custo
-        self.__passo = []
+        self.__passos = [] # faltava o "s" em passos
+        no = no_final # utilizamos a vareavel "no" no ciclo while mas a vareavel nao estava defenida, agr ja esta
         while no.antecessor: 
             passo = PassoSolucao(no.antecessor.estado, no.operador) 
             self.__passos.insert(0,passo) 
@@ -29,7 +30,7 @@ class Solucao:
 
 
     @property
-    def simensao(self):
+    def dimensao(self): # estava simensao em vez de dimensao
         return self.__dimensao
     
     @property
