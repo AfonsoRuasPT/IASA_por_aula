@@ -1,4 +1,5 @@
-from mod import Estado, Operador
+from mod.estado import Estado
+from mod.operador import Operador
 
 class PassoSolucao(Estado, Operador):
 

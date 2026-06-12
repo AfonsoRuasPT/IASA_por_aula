@@ -9,7 +9,7 @@ class No:
         desta classe.
     """
 
-    def __init__(self, estado, operador = None, antecessor = None, custo = None):
+    def __init__(self, estado, operador = None, antecessor = None, custo = 0):
         self.__estado = estado
         self.__operador = operador
         self.__antecessor = antecessor

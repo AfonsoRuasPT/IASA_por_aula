@@ -2,6 +2,17 @@ from lib.mod.estado import Estado
 
 class EstadoContagem(Estado):
 
+
+    """
+    Inunciado Problema Contagem:
+
+    Dado um valor inicial, um valor fina le um conjunto de
+    incrementos possiveis, que incrementos realizar para
+    atingir ou superar o valor final.
+
+    Para observar o efeito do custo na procura, o custo dos operadores corresponde ao quadrado do incremento.
+    """
+
     """
     No ambito do nosso problema contagem o estado da contagem representa o valor atual da contagem.
     Utilizamos o valor da contagem como o identificador do estaado (id_valor) para garantir que cada estado é unicamente identificado.

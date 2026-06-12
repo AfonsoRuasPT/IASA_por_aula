@@ -19,7 +19,7 @@ if __name__ == "__main__":
     comportamento = Recolher() # intanciar o comportamento Explorar
     controlo = ControloReact(comportamento) # intanciar o controlo ControloReact com o comportamento
     agente = AgenteProsp(controlo) # instanciar o agente AgenteProsp com o controlo
-    simulador = Simulador(2, agente)
+    simulador = Simulador(1, agente)
     simulador.executar()
 
 
