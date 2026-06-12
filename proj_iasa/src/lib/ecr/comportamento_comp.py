@@ -25,16 +25,17 @@ class ComportamentoComp(Comportamento):
         O comportamento composto é como o nome indica um conjunto de comportamentos, para selecionar um desses comportamentes para ser ativado existe uma seleccao se accao
         que é um metodo que temos tambem
         """
-        self.__comportamentos = {}
+        self.__comportamentos = comportamentos # alterei isto
 
     def activar(self, percepcao): # retorna uma accao
-        print("ativar")
         accoes = []
         for comportamento in self.__comportamentos: # para todos os comportamentos, activar o comportamento com base na percepção, que é uma accao
             accao = comportamento.activar(percepcao)
-            accoes.append(accao) # se a accao for diferente de None, adicionar a accao à lista de accoes
-            if accoes: # verificar se a lista tem accoes
-                return self.seleccionar_accao(accoes) # selecionar a accao a partir do metodo seleccionar_accao
+            if accao: # linha adicionada, nao estava
+                accoes.append(accao) # se a accao for diferente de None, adicionar a accao à lista de accoes
+        if accoes: # verificar se a lista tem accoes
+            # print("ATIVAR")
+            return self.seleccionar_accao(accoes) # selecionar a accao a partir do metodo seleccionar_accao
                 # nao retornamos logo a accao porque esse criterio cabe ao metodo seleccionar_accao, respeitar a arquiterira, dependendo do critério podemos até nao retornar accao nenhuma, e caso queiramos alterar o criterio assim não temos de mexer neste método 
         
     @abstractmethod # metodo abstrato

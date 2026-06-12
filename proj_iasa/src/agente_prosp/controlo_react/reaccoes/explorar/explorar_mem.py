@@ -18,7 +18,7 @@ class ExplorarMem(Comportamento):
         posicao_direccao = (dir_posicao, dir_direccao) # contruir a tupla posicao_direcao com a posicao e direcao atual do agente
         if posicao_direccao in self.__memoria: # verificcar se a posicao e direccao atual do agente ja estao em memoria
             return # se estiverem nao retornamos nada
-        elif len(self.__memoria) != self.dim_max_mem: # verificamos se a memoria esta cheia
+        elif len(self.__memoria) != self.__dim_max_mem: # verificamos se a memoria esta cheia
                 self.__memoria.append(posicao_direccao) # como a memoria nao esta cheia, adicionamos o tuplo a memoria
                 return Avancar() # retornamos a accao avancar
         else: # como a lista esta cheia

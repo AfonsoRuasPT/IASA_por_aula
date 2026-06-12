@@ -1,5 +1,7 @@
 from agente_prosp.controlo_react.reaccoes.recolher.recolher import Recolher
 from agente_prosp.controlo_react.reaccoes.explorar.explorar import Explorar
+from agente_prosp.controlo_react.reaccoes.aproximar.aproximar_alvo import AproximarAlvo
+from agente_prosp.controlo_react.reaccoes.explorar.explorar_mem import ExplorarMem
 from agente_prosp.controlo_react.controlo_react import ControloReact
 from agente_prosp.agente_prosp import AgenteProsp
 from sae import Simulador
@@ -17,7 +19,7 @@ if __name__ == "__main__":
     comportamento = Recolher() # intanciar o comportamento Explorar
     controlo = ControloReact(comportamento) # intanciar o controlo ControloReact com o comportamento
     agente = AgenteProsp(controlo) # instanciar o agente AgenteProsp com o controlo
-    simulador = Simulador(1, agente)
+    simulador = Simulador(2, agente)
     simulador.executar()
 
 

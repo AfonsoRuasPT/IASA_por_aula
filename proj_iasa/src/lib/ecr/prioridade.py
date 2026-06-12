@@ -2,7 +2,7 @@ from .comportamento_comp import ComportamentoComp
 
 class Prioridade(ComportamentoComp):
     
-    def seleccionar_accao(accoes):
+    def seleccionar_accao(self, accoes):
         """A acção tem uma prioridade assiciada, na lista de acções temos uma prooridade associada e temos de retornar a acção com maior prioridade"""
         
         """ -- MINHA IMPLEMENTAÇÃO DO METODO --

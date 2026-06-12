@@ -6,4 +6,4 @@ class Estimulo(ABC):
 
     @abstractmethod
     def detectar(self, percepcao): # retorna uma accao
-        """Por fazer"""
+        """"""

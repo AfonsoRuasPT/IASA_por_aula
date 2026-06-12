@@ -11,4 +11,4 @@ class AproximarDir(Reaccao):
     """
 
     def __init__(self, direccao):
-        super().__init__(EstimuloAlvo, RespostaMover(direccao)) # chama o construtor da classe Reaccao, passando uma instancia de RespostaMover com a direcao dada
+        super().__init__(EstimuloAlvo(direccao), RespostaMover(direccao)) # chama o construtor da classe Reaccao, passando uma instancia de RespostaMover com a direcao dada

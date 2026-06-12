@@ -6,7 +6,7 @@ class RespostaEvitar(Resposta):
     Resposta evitar para o comportamento evitar
     """
 
-    def _obter_accao(percepcao):
+    def _obter_accao(self, percepcao):
         """
         Obter a accao de evitar um obstáculo.
 
