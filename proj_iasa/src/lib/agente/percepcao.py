@@ -1,4 +1,4 @@
 from abc import ABC, abstractmethod
 
-class percepcao(ABC):
+class Percepcao(ABC):
     """Interface que representa uma percepção"""

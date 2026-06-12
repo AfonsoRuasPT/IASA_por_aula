@@ -1,5 +1,5 @@
-from jogo.agente.percepcao_jogo import PercepcaoJogo
-from lib.agente.agente import Agente
+from .percepcao_jogo import PercepcaoJogo
+from agente.agente import Agente
 
 class AgenteJogo(Agente):
     

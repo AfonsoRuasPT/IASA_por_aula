@@ -1,5 +1,5 @@
-from jogo.agente.agente_jogo import AgenteJogo
-from jogo.personagem.controlo_personagem import ControloPersonagem
+from agente.agente_jogo import AgenteJogo
+from .controlo_personagem import ControloPersonagem
 
 
 class Personagem(AgenteJogo):
@@ -8,4 +8,4 @@ class Personagem(AgenteJogo):
         super().__init__(ambiente, ControloPersonagem()) 
     
     def mostrar(self):
-        """"""
+        print(f"\nPersonagem: {self._controlo._maq_est.estado_atual.name}")

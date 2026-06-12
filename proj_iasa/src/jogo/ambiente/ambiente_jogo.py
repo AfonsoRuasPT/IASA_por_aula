@@ -1,9 +1,9 @@
-from jogo.ambiente.evento_jogo import EventoJogo
+from .evento_jogo import EventoJogo
 
 
 class AmbienteJogo():
 
-    def __init__(self, ):
+    def __init__(self):
         self.__eventos = {evento.value: evento for evento in EventoJogo} # enumerado de eventos do jogo
         """seja um dicionaria ou uma lista quando defenimos cada elemento, e geramos dinamicamente as expressoes de
           cada elemento, ou seja, o valor de cada elemento do enumerado, e o proprio elemento do enumerado, entao 
