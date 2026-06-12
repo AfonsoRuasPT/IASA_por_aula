@@ -8,4 +8,5 @@ class Personagem(AgenteJogo):
         super().__init__(ambiente, ControloPersonagem()) 
     
     def mostrar(self):
-        print(f"\nPersonagem: {self._controlo._maq_est.estado_atual.name}")
+      #  print(f"\nPersonagem: {self._controlo.__maq_est.estado_atual.name}") Antes tinha isto
+      print(f"\nEstado: {self._controlo.estado.name}")

@@ -16,7 +16,7 @@ class AmbienteJogo():
 
     def evoluir(self):
         # atualizar evento com o gerar evento
-        self.__evento = self._gerar_evento() # atualizar o evento atual do jogo com o evento gerado pelo método _gerar_evento, que é um método privado para gerar um evento do jogo, é chamado pelo método evoluir para atualizar o evento atual do jogo
+        self.__evento = self.__gerar_evento() # atualizar o evento atual do jogo com o evento gerado pelo método _gerar_evento, que é um método privado para gerar um evento do jogo, é chamado pelo método evoluir para atualizar o evento atual do jogo
         if self.__evento is not None: # se o evento gerado for diferente de None, ou seja, se houver um evento do jogo a atualizar, None é uma marca de ausencia de valor, o != implica comparacao de valores ent aqui n dá, é um teste semantico
             self.evento.mostrar() # imprimir o evento atualizado do jogo
 
