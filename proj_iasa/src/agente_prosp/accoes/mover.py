@@ -1,5 +1,5 @@
-from lib.ecr.accao import Accao
-from lib.sae.agente.movimento import Movimento
+from ecr.accao import Accao
+from sae import Movimento
 
 class Mover(Movimento, Accao):
 

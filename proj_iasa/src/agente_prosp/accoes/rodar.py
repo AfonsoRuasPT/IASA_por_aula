@@ -1,5 +1,5 @@
-from lib.ecr.accao import Accao
-from lib.sae.agente.movimento import Movimento
+from ecr.accao import Accao
+from sae import Movimento
 
 class Rodar(Movimento, Accao): 
     
@@ -8,3 +8,4 @@ class Rodar(Movimento, Accao):
 
     def __init__(self, direcao):
         super().__init__(direcao, 0) # chama o construtor da classe Movimento, com passo de 0 unidades (gira-se no mesmo sitio)
+        

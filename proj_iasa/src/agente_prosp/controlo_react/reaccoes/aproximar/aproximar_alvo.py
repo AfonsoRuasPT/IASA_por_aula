@@ -1,4 +1,6 @@
-from lib.ecr.prioridade import Prioridade
+from ecr.prioridade import Prioridade
+from sae import Direccao
+from .aproximar_dir import AproximarDir
 
 class AproximarAlvo(Prioridade):
     """
@@ -29,4 +31,23 @@ class AproximarAlvo(Prioridade):
     A classe AproximarAlvo compara as prioridades (estímulos) das 4 direções, seleciona a direção com o valor 
     mais alto.
     """
+
+    def __init__(self):
+        """
+                super().__init__([AproximarDir(Direccao.NORTE), 
+                          AproximarDir(Direccao.SUL), 
+                          AproximarDir(Direccao.ESTE), 
+                          AproximarDir(Direccao.OESTE)])
+        """
+                            # mesma coisa que o comentario em cima
+        """
+        Sendo o Aproximar alvo um comportamento composto, ele é composto por 4 comportamentos mais simples, que são os AproximarDir,
+        cada um associado a uma direcao, e cada um desses comportamentos tem um estimulo associado a essa direcao, o EstimuloAlvo, 
+        que calcula a prioridade de cada direcao, e o comportamento composto seleciona a direcao com a maior prioridade.
+        Por isso passamos uma lista com os 4 comportamentos numa lista.
+        """
+        super().__init__([AproximarDir(direccao) for direccao in Direccao]) # utiliza os geradodes do python, lista por intenção.
+
+
+
     

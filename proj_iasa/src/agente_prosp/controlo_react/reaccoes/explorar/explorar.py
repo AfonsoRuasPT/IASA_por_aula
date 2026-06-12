@@ -1,6 +1,6 @@
 from random import random, choice
-from lib.ecr.comportamento import Comportamento
-from lib.sae.ambiente.direccao import Direccao
+from ecr.comportamento import Comportamento
+from sae import Direccao
 from agente_prosp.accoes.rodar import Rodar
 from agente_prosp.accoes.avancar import Avancar
 
@@ -11,10 +11,15 @@ class Explorar(Comportamento): # Explorar é um comportamento, por isso herda de
     Aleatoriamente anda e roda ah procura alvos
     """
 
+    """
+    Comprtamento explorar com movimentos em direções aletorias
+    """
+
     def __init__(self, prob_rotacao = 0.7): # contrutor com atributo prob_rotacao que se oitido tem o valor default de 0.7
         self.__prob_rotacao = prob_rotacao  # defenir atributo privado prob_rotacao
 
-    def activar(self, percepcao): # nao usamos a "percepcao" porque explorar não depende de nenhum estimulo
+    def activar(self, percepcao):           # activação do comportamento
+                                            # nao usamos a "percepcao" porque explorar não depende de nenhum estimulo
         if random() < self.__prob_rotacao: # "random()" gera um numero entre 0 e 1
                                            # VERIFICAÇÃO - > verificamos de esse numero é menor que a probabilidade de rotacao
 

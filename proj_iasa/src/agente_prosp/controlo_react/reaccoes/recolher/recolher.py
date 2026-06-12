@@ -1,4 +1,8 @@
-from lib.ecr.hierarquia import Hierarquia
+from ecr.hierarquia import Hierarquia
+from ..explorar.explorar import Explorar
+from ..explorar.explorar_mem import ExplorarMem
+from ..aproximar.aproximar_alvo import AproximarAlvo
+from ..evitar.evitar_obst import EvitarObst
 
 class Recolher(Hierarquia):
 
@@ -9,3 +13,6 @@ class Recolher(Hierarquia):
     """
 
     """"""
+
+    def __init__(self):
+        super().__init__((AproximarAlvo(), EvitarObst(), ExplorarMem(), Explorar())) # AproximarAlvo(), EvitarObst(), ExplorarMem(), 

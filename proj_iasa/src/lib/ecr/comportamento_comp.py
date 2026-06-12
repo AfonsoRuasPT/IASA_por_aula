@@ -28,6 +28,7 @@ class ComportamentoComp(Comportamento):
         self.__comportamentos = {}
 
     def activar(self, percepcao): # retorna uma accao
+        print("ativar")
         accoes = []
         for comportamento in self.__comportamentos: # para todos os comportamentos, activar o comportamento com base na percepção, que é uma accao
             accao = comportamento.activar(percepcao)
